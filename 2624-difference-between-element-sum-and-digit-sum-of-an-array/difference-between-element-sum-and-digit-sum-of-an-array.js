@@ -10,16 +10,16 @@ var differenceOfSum = function(nums) {
         let num = nums[i];
         elementSum += num;
 
-        // extract digits manually (no String or Number)
+       
         let temp = num;
         while (temp > 0) {
-            let digit = temp % 10;   // get last digit
+            let digit = temp % 10;   
             digitSum += digit;
-            temp = (temp - digit) / 10;  // remove last digit
+            temp = (temp - digit) / 10; 
         }
     }
 
-    // manually compute absolute difference (no Math.abs)
+   
     let diff = elementSum - digitSum;
     if (diff < 0) diff = -diff;
 
